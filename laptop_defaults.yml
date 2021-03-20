@@ -1,0 +1,8 @@
+---
+- name: Update Laptops
+  hosts: localhost
+
+  roles:
+    - laptop
+
+

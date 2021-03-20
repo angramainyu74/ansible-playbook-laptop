@@ -1,0 +1,8 @@
+---
+- name: add batt alias
+  lineinfile:
+    path: ~/.bash_aliases
+    regexp: "^alias batt="
+    line: "alias batt=\"upower -i $(upower -e | grep 'BAT') | grep -E 'state|to\\ full|to\\ empty|percentage'\""
+    state: present
+    create: true
